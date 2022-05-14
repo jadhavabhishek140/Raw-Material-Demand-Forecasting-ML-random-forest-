@@ -1,0 +1,331 @@
+
+
+body{
+  width:100%;
+  /* background-repeat:no-repeat; */
+  background-image:url('../images/');
+}
+
+
+
+
+h4 {
+  background-color: rgb(239, 22, 22);
+}
+
+.CarsInput {
+  background-color: greenyellow;
+  font-size: larger;
+}
+/* 
+.nav{
+  border:4px solid ivory;
+  border-width:1px 0;
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:center;
+  font-family: 'Nanum Gothic';
+  width: 134%;
+}
+.nav li{
+  display:inline;
+}
+.nav a{
+  display:inline-block;
+  padding:10px;
+} */
+
+
+
+
+
+
+
+.nav {
+	overflow: hidden;
+	background-color: #333;
+	 position: fixed;/* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 108%; /* Full width */
+	padding: 20px;
+  }
+  
+  /* Links inside the navbar */
+  .nav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+
+  }
+  
+  /* Change background on mouse-over */
+   .navbar a:hover {
+	background: #ddd;
+	color: black;
+  } *
+  
+  /* Main content */
+  .main {
+	margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
+
+/* for adjusting navigation container */
+/* .nav>li>a {
+  position: relative;
+  display: block;
+  padding: 22px;
+  font-size: 28px;
+  background-color: #9de7cc;;
+} */
+
+
+.nav>li>a {
+    display: block;
+    padding: 10px 451px;
+    font-size: 27px;
+}
+/* 
+heading navigation bar colour */
+a {
+  color: #111213;
+}
+
+/* navigation bar code ends here */
+
+/* started now  */
+
+.text-primary, .list-wrapper .completed .remove, .horizontal-menu .bottom-navbar .page-navigation>.nav-item.mega-menu .submenu .category-heading {
+  color: #F85924 !important;
+}
+
+
+.card{
+
+  background-color: #a99de7;
+  margin: 79px 307px;
+  padding: 3px;
+  text-align: center;
+}
+
+.stretch-card>.card {
+    min-width: 100%;
+    margin: 0px 155px 7px 154px;
+    padding: 0px 234px 60px 196px;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .lightGallery .image-tile, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+  /* .content-wrapper {
+    max-width: 1140px;
+} */
+
+.page-body-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main-panel {
+  background: rgba(247, 247, 244, 0.815);
+  width: 100%;
+  padding: 37px 178px;
+  margin: auto;
+}
+
+#start{
+  font-size: 13px;
+  padding: 3px 16px 0px 8px;
+    margin: 8px 11px 14px 9px;
+}  
+
+
+#End {
+  font-size: 13px;
+  padding: 3px 16px 0px 8px;
+    margin: 8px 11px 14px 9px;
+}
+
+#cars{
+  margin: 0px 25px 32px 0px;
+}
+
+form {
+  margin: 83px 2px;
+}
+p {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  
+  touch-action: manipulation;
+  cursor: pointer;
+  
+
+ 
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 8px 0px 0px 15px;
+}
+
+
+/*  
+for enter details */
+.h4, h4 {
+  font-size: 25 px;
+  margin: 0px 20px 0px 0px;
+  width: 108%;
+  padding: 0px 550px;
+  font-weight: bold;
+  font-family: 'Nanum Gothic';
+  font-size: 3rem;
+  background: rgb(220, 186, 72);
+}
+
+
+/* start and end year */
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 22px;
+
+}
+
+.card-body {
+  margin: 16px 1px 81px 0px;
+  background-color: #F85924;
+}
+
+.container-fluid {
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+
+
+}
+.checkboxes{
+margin: 0px -4px 24px -4px;
+  padding: 18px 0px;
+}
+
+/* 
+for chart */
+/* #datatable {
+border: 1px solid red;
+} */
+
+.table-bordered {
+  margin: 24px 75px;
+  font-size: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+  border: 2px solid;
+
+}
+/* .table-bordered>thead>tr>th {
+  border: 2px solid;
+}
+.tbody{
+  border: 2px solid;
+} */
+
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+  border-bottom-width: 2px;
+  border: 2px solid;
+}
+
+.table-bordered>tbody>tr>td {
+  border: 2px solid;
+}
+
+.table-bordered>tbody>tr>th{
+  border: 2px solid ;
+}
+.table-bordered>tbody>tr>th {
+  border: 2px solid;
+  padding: 5px;
+}
+
+.table-bordered>tbody>tr>td {
+  border: 2px solid;
+  padding: 2px 14px;
+}
+
+.container {
+  margin: -23px 20px 29px 19px;
+  padding-right: 623px;
+height: 1400px;
+}
+
+.main-panel {
+width: 227%;
+}
+
+.content-wrapper {
+  max-width: 74%;
+}
+
+
+
+form {
+  margin: 95px 147px;
+}
+
+
+#container{
+  width: 550px;
+  height: 2000px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+
+.colr{
+
+  
+    margin: 121px 222px;
+   background-color: #a99de7; 
+    padding: 18px;
+
+}
+
+
+
+/* * {
+  background-color: beige;
+ 
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,259 @@
+<html lang="en">
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<!-- Ajax -->
+
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!--  Jquery Cdn   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- highcharts -->
+
+<script src = "https://code.highcharts.com/highcharts.js"></script> 
+<script src = "https://code.highcharts.com/modules/data.js"></script>
+
+<!-- Jquery Cdn -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Raw Material Prediction </title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}">  </script>
+</head>
+ <body >
+
+
+   <!-- Navigation bar heading starts from hear -->
+    
+	<!--- start-header-->
+	
+		<!--start-top-nav-->
+      <ul class="nav">
+         <li><a href="/">Raw Material Forecasting in Automobile Industry</a></li>
+    
+       </ul>
+
+<!-- navigation bar code ends here -->
+
+
+<!-- 
+This is for containe under container -->
+
+<!-- <div class="container-fluid page-body-wrapper"> -->
+    
+<!-- 
+    <div class="main-panel"> -->
+        <!-- <div class="content-wrapper"> -->
+            <!-- <div class="justify-content-sm-center "> -->
+          
+            <!-- <div class="text-center"> -->
+                <h4 class="card-title">Enter your details</h4>
+
+                    <!-- <div class="col">    -->
+                       <div class="card ">
+                              
+                                <!-- end -->
+                        
+
+    <form name="f1" action = "http://localhost:5000/predict" method = "POST" >
+        <!-- Starting Year -->
+        <label for="startyear"> Start Year: </label>
+        <input type="number" name="startyear" id="Starting_Year" required>
+        
+        <!-- Ending Year -->
+        <label for="endyear"> End Year: </label>
+        <input type="number" name="endyear" id="Ending_Year" required >
+        
+
+        <!-- Number Of Cars -->
+        <!-- <label for="no_of_cars"> Enter No Of Cars: </label>
+        <input type="number" name="no_of_cars" id="">  -->
+        
+        <!-- Input For Cars: -->
+
+        
+        <!-- <input type="button" onclick="MakeTable()" value="Enter Values"> -->
+             
+                <!--  Input Year Wise  -->
+                <div>
+                <input type="button" value="Confirm Start& End Year" class="btn btn-info"  id = "newCarsBox" onclick="createNewElement()" />
+            </div>
+                        <div class="container-fluid">
+                            <span id="data"> </span>   
+                            <span id="data"> </span> 
+                            <span id="data"> </span>
+                        </div>
+        <button type="button" onclick="TotalYears()" class="btn btn-warning"> Confirm No Of Vehicles </button>
+        
+       
+            <!-- Predict Button -->
+            <button type="submit"value="submit" class="btn btn-success"> Predict </button>
+        </div>
+    </form>
+         <!-- <div class="container">    -->
+
+
+        <!-- {% block content %}
+        <table class="table-bordered" div id='table_div'>
+            <tr>
+                <th > {{Years}} </th>
+                <th > {{Materials}} </th>
+            </tr>
+            <tr>
+                <th scope="col"> {{Years}} </th>
+                <th style="display:none" id="steelColHead" scope="col">{{Steel}}</th>
+                <th style="display:none" id="plasticColHead" scope="col">{{Plastic}}</th>
+                <th style="display:none" id="ironColHead" scope="col">{{Iron}}</th>
+                <th style="display:none" id="rubberColHead" scope="col">{{Rubber}}</th>
+                <th style="display:none" id="aluminiumColHead" scope="col">{{Aluminium}}</th>
+                <th style="display:none" id="glassColHead" scope="col">{{Glass}}</th>
+                <th style="display:none" id="copperColHead" scope="col">{{Copper}}</th>
+            </tr>
+            <tr> 
+                <th class="" style="width: 100px;"> {{years_to_render}}  </th>
+                <td style="display:none" id="steelCol" for="steelCol" style="width :0px;">   {{steel_to_render}}  </td>
+                <td style="display:none" id="plasticCol"  class="plasticCol" style="width :0px;">  {{plastic_to_render}}  </td>
+                <td style="display:none" id="ironCol" class="ironCol" style="width :0px;">  {{iron_to_render}}  </td>
+                <td style="display:none" id="rubberCol" class="rubberCol" style="width :0px;">  {{rubber_to_render}}  </td>
+                <td style="display:none" id="aluminiumCol" class="aluminiumCol" style="width :0px;">  {{aluminium_to_render}}  </td>
+                <td style="display:none" id="glassCol" class="glassCol" style="width :0px;">  {{glass_to_render}}  </td>
+                <td style="display:none" id="copperCol" class="copperCol" style="width :0px;">  {{copper_to_render}}  </td>
+            </tr>
+            
+        </table>
+        
+        {% endblock %} -->
+
+
+        <table id = "datatable"  class="table-bordered">
+         <thead>
+            <tr>
+              <!-- Years -->
+               <th> {{Years}} </th>
+               <!-- <th> {{Materials}} </th> -->
+               {% for i in years %}
+                <td >  {{ i }}  </td>
+                {% endfor %}
+            </tr>
+         </thead>
+
+         <tbody>
+             <tr>
+              <!-- Steel -->
+               <th >{{Steel}}</th>
+               {% for steel in steel_table %}
+               <td  style="width :0px;">  {{ steel }}  </td>
+               {% endfor %}
+             </tr>
+            <!-- Plastic -->
+             <tr>
+               <th >{{Plastic}}</th>
+               {% for plastic in plastic_table %}
+               <td  style="width :0px;">{{ plastic }}</td>
+               {% endfor %}
+             </tr>
+         
+             <!-- IRON    -->
+             <tr>
+                <th> {{Iron}} </th>
+                {% for iron in iron_table %}
+                <td  style="width :0px;">{{ iron }}</td>
+                {% endfor %}
+             </tr>
+
+             <!-- Rubber -->
+             <tr>
+                <th>{{Rubber}}</th>
+                {% for rubber in rubber_table %}
+                <td  style="width :0px;">{{ rubber }}</td>
+                {% endfor %}
+             </tr>
+             
+             <!-- Aluminium -->
+             <tr>
+                <th>{{Aluminium}}</th>
+                {% for aluminium in aluminium_table %}
+                <td  style="width :0px;">{{ aluminium }}</td>
+                {% endfor %}
+             </tr>
+             <!-- Glass -->
+             <tr>
+                <th>{{Glass}}</th>
+                {% for glass in glass_table %}
+                <td  style="width :0px;">{{ glass }}</td>
+                {% endfor %}
+             </tr>
+             <!-- Copper -->
+             <tr>
+                <th>{{Copper}}</th>
+                {% for copper in copper_table %}
+                <td  style="width :0px;">{{ copper }}</td>
+                {% endfor %}
+             </tr>
+         </tbody>
+        
+      </table>
+
+      <div id = "container" style = "width: 500px;   height: 2000px; width:1480px ; margin: auto  "></div>
+   </div>
+       
+        <script language = "JavaScript">
+           $(document).ready(function() {
+              var data = {
+                 table: 'datatable'
+              };
+              var chart = {
+               height: 2000,
+               width:1500,
+               
+                 type: 'bar'
+              };
+              var title = {
+                 text: 'Raw Material Demand Over The Years'   
+              };      
+              var yAxis = {
+                 allowDecimals: true,
+                 title: {
+                    text: 'Quantity in Tonnes'
+                 }
+              };
+
+              var tooltip = {
+                 formatter: function () {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                       this.point.y + ' ' + this.point.name.toUpperCase();
+                 }
+              };
+              var credits = {
+                 enabled: false
+              };  
+              var json = {};   
+              json.chart = chart; 
+              json.title = title; 
+              json.data = data;
+              json.yAxis = yAxis;
+              json.credits = credits;  
+              json.tooltip = tooltip;  
+              $('#container').highcharts(json);
+           });
+        </script>
+</body>
+</html>
